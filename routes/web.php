@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 //immunization route
 Route::resource('immunization', 'App\Http\Controllers\ImmunizationController');
+//post
+// Route::post('immunization', 'App\Http\Controllers\ImmunizationController@store');

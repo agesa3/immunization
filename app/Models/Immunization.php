@@ -15,5 +15,5 @@ class Immunization extends Model
      * @var array
      */
     protected $fillable = [
-        'child_name', 'age', 'vaccine_type', 'date','doctor','mother_name','next_date' ];
+        'child_name', 'age', 'vaccine_type', 'date','doctor','hospital','notes','mother_name','next_date' ];
 }

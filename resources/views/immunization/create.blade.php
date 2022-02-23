@@ -16,7 +16,7 @@
 </div>
 @endif
 
-<form action="{{ route('immunization.store') }} method="POST">
+<form action="{{ route('immunization.store') }}" method="POST">
     @csrf
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
