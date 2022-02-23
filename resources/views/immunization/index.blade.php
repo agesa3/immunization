@@ -1,4 +1,4 @@
-@extends('vaccination.layout')
+@extends('immunization.layout')
 
 @section('content')
     <div class="row">
@@ -30,7 +30,7 @@
             <th>Next Date</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($vaccinations as $key => $vaccination)
+        @foreach ($immunization as $key => $vaccination)
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $vaccination->child_name }}</td>
@@ -57,5 +57,5 @@
         @endforeach
     </table>
       
-     {!! $vaccinations->links() !!}
+     {!! $immunizations->links() !!}
      
