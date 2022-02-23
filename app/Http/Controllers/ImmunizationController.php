@@ -14,8 +14,8 @@ class ImmunizationController extends Controller
      */
     public function index()
     {
-        $immunization = Immunization::latest()->paginate(5);
-        return view('immunization.index',compact('immunization'))
+        $immunizations = Immunization::latest()->paginate(5);
+        return view('immunization.index',compact('immunizations'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

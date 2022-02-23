@@ -18,7 +18,7 @@
         </div>
     @endif
    
-    <table class="table table-bordered">
+    <!-- <table class="table table-bordered">
         <tr>
             <th>No</th>
             <th>Child Name</th>
@@ -30,16 +30,16 @@
             <th>Next Date</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($immunizations as $key => $vaccination)
+        @foreach ($immunizations as $immunization)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $vaccination->child_name }}</td>
-            <td>{{ $vaccination->age }}</td>
-            <td>{{ $vaccination->vaccine_type }}</td>
-            <td>{{ $vaccination->doctor }}</td>
-            <td>{{ $vaccination->date }}</td>
-            <td>{{ $vaccination->mother_name }}</td>
-            <td>{{ $vaccination->next_date }}</td>
+            <td>{{ $immunization->child_name }}</td>
+            <td>{{ $immunization->age }}</td>
+            <td>{{ $immunization->vaccine_type }}</td>
+            <td>{{ $immunization->doctor }}</td>
+            <td>{{ $immunization->date }}</td>
+            <td>{{ $immunization->mother_name }}</td>
+            <td>{{ $immunization->next_date }}</td>
             <td>
                 <form action="{{ route('immunization.destroy',$vaccination->id) }}" method="POST">
    
@@ -55,7 +55,7 @@
             </td>
         </tr>
         @endforeach
-    </table>
-      
-     {!! $immunizations->links() !!}
+    </table> -->
+<!--       
+     {!! $immunizations->links() !!} -->
      
