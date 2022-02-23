@@ -16,7 +16,7 @@
 </div>
 @endif
 
-<form action="{{ route('vaccination.update',$product->id) }}" method="POST">
+<form action="{{ route('immunization.update',$product->id) }}" method="POST">
     @csrf
     @method('PUT')
 
