@@ -37,7 +37,21 @@ class ImmunizationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$
+            $request->validate([
+            'child_name' => 'required',
+            'age' => 'required',
+            'vaccine_type' => 'required',
+            'doctor' => 'required',
+            'date' => 'required',
+            'mother_name' => 'required',
+            'next_date' => 'required',
+        ]);
+
+        Immunization::create($request->all());
+        return redirect()->route('immunization.index')
+                        ->with('success','Immunization created successfully.');
+
     }
 
     /**
@@ -49,6 +63,9 @@ class ImmunizationController extends Controller
     public function show(Immunization $immunization)
     {
         //
+        return view('immunization.show',compact('immunization'));
+
+
     }
 
     /**
@@ -59,7 +76,7 @@ class ImmunizationController extends Controller
      */
     public function edit(Immunization $immunization)
     {
-        //
+        return view('immunization.edit',compact('immunization'));
     }
 
     /**
@@ -71,7 +88,19 @@ class ImmunizationController extends Controller
      */
     public function update(Request $request, Immunization $immunization)
     {
-        //
+        $request -> validate([
+            'child_name' => 'required',
+            'age' => 'required',
+            'vaccine_type' => 'required',
+            'doctor' => 'required',
+            'date' => 'required',
+            'mother_name' => 'required',
+            'next_date' => 'required',
+        ]);
+        $immunization -> update($request -> all());
+
+        return redirect() -> route('immunization.index')
+                        -> with('success','Immunization updated successfully');
     }
 
     /**
@@ -83,5 +112,8 @@ class ImmunizationController extends Controller
     public function destroy(Immunization $immunization)
     {
         //
+        $immunization -> delete();
+        return redirect() -> route('immunization.index')
+                        -> with('success','Immunization deleted successfully');
     }
 }
