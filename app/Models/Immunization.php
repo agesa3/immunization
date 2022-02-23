@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Immunization extends Model
 {
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'child_name', 'age', 'vaccine_type', 'date', 'mother_name','next_date' ];
 }
