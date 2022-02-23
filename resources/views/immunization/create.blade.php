@@ -57,6 +57,19 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>hospital:</strong>
+                <input type="text" name="hospital" class="form-control" placeholder="Hospital">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Notes</strong>
+                <input type="text" name="notes" class="form-control" placeholder="Notes">
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Next Date:</strong>
                 <input type="date" name="next_date" class="form-control" placeholder="Next Date">
             </div>

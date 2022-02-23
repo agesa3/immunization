@@ -43,6 +43,8 @@ class ImmunizationController extends Controller
             'age' => 'required',
             'vaccine_type' => 'required',
             'doctor' => 'required',
+            'hospital' => 'required',
+            'notes' => 'required',
             'date' => 'required',
             'mother_name' => 'required',
             'next_date' => 'required',
