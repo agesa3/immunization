@@ -47,8 +47,6 @@
             <td>{{ $immunization->next_date }}</td>
             <td>
                 <form action="{{ route('immunization.destroy',$immunization->id) }}" method="POST">
-   
-    
                     <a class="btn btn-primary" href="{{ route('immunization.update',$immunization->id) }}">Edit</a>
    
                     @csrf

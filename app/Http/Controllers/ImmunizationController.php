@@ -65,7 +65,7 @@ class ImmunizationController extends Controller
     public function show(Immunization $immunization)
     {
         //
-        return view('immunization.show',compact('immunization'));
+        return view('immunization.update',compact('immunization'));
 
 
     }
