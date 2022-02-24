@@ -59,6 +59,45 @@
         @endforeach
 
     </table>
+
+    {{-- patient report --}}
+    <div class="row">
+        {{-- $bcgCount = Immunization::where('vaccine_type','=','BCD')->count(); --}}
+        {{-- display the count --}}
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">BCG</h5>
+                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">POLIO</h5>
+                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">DIPHTHERIA</h5>
+                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">TETANUS</h5>
+                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                </div>
+            </div>
+        </div>
+
+    </div>
       
      {!! $immunizations->links() !!}
 
