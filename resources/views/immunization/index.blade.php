@@ -74,30 +74,30 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">POLIO</h5>
-                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                    <p class="card-text">{{ $opvCount }}</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">DIPHTHERIA</h5>
-                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                    <h5 class="card-title">MEASELS</h5>
+                    <p class="card-text">{{ $measlesCount }}</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">TETANUS</h5>
-                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                    <h5 class="card-title">YELLOW FEVER</h5>
+                    <p class="card-text">{{ $yellowFeverCount }}</p>
                 </div>
             </div>
         </div>
 
     </div>
     {{-- end of patient report --}}
-    
+
       
      {!! $immunizations->links() !!}
 
