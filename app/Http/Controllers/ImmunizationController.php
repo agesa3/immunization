@@ -15,7 +15,12 @@ class ImmunizationController extends Controller
     public function index()
     {
         $immunizations = Immunization::latest()->paginate(5);
-        return view('immunization.index',compact('immunizations'))
+        $bcgCount = Immunization::where('vaccine_type','=','BCD')->count();
+        $opvCount = Immunization::where('vaccine_type','=','OPV')->count();
+        $pentaCount = Immunization::where('vaccine_type','=','PENTA')->count();
+        $measlesCount = Immunization::where('vaccine_type','=','MEASLES')->count();
+        $yellowFeverCount = Immunization::where('vaccine_type','=','YELLOW FEVER')->count();
+        return view('immunization.index',compact('immunizations','bcgCount','opvCount','pentaCount','measlesCount','yellowFeverCount'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -118,4 +123,6 @@ class ImmunizationController extends Controller
         return redirect() -> route('immunization.index')
                         -> with('success','Immunization deleted successfully');
     }
+
+  
 }

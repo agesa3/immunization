@@ -48,7 +48,6 @@
             <td>
                 <form action="{{ route('immunization.destroy',$immunization->id) }}" method="POST">
                     <a class="btn btn-primary" href="{{ route('immunization.update',$immunization->id) }}">Edit</a>
-   
                     @csrf
                     @method('DELETE')
       
@@ -62,13 +61,12 @@
 
     {{-- patient report --}}
     <div class="row">
-        {{-- $bcgCount = Immunization::where('vaccine_type','=','BCD')->count(); --}}
         {{-- display the count --}}
         <div class="col-lg-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">BCG</h5>
-                    {{-- <p class="card-text">{{ $bcgCount }}</p> --}}
+                    <p class="card-text">{{ $bcgCount }}</p>
                 </div>
             </div>
         </div>
@@ -98,6 +96,8 @@
         </div>
 
     </div>
+    {{-- end of patient report --}}
+    
       
      {!! $immunizations->links() !!}
 
