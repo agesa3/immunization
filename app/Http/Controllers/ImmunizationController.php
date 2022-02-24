@@ -15,7 +15,7 @@ class ImmunizationController extends Controller
     public function index()
     {
         $immunizations = Immunization::latest()->paginate(5);
-        $bcgCount = Immunization::where('vaccine_type','=','BCD')->count();
+        $bcgCount = Immunization::where('vaccine_type','=','BCG')->count();
         $opvCount = Immunization::where('vaccine_type','=','OPV')->count();
         $pentaCount = Immunization::where('vaccine_type','=','PENTA')->count();
         $measlesCount = Immunization::where('vaccine_type','=','MEASLES')->count();

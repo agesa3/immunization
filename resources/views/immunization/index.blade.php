@@ -1,6 +1,7 @@
 @extends('immunization.layout')
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -11,7 +12,7 @@
             </div>
         </div>
     </div>
-   
+   <br />
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -97,6 +98,7 @@
 
     </div>
     {{-- end of patient report --}}
+</div>
 
       
      {!! $immunizations->links() !!}
